@@ -46,4 +46,3 @@ El listado de posibles estados es el siguiente:
 - **Validating**: si un campo de formulario está en proceso de validación o no.
 - **Pending**: si una operación asíncrona, como la validación de un campo de formulario, está en proceso o no.
 - **Submitted**: si un formulario ha sido enviado o no.
-

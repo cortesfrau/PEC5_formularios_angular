@@ -1,0 +1,14 @@
+<div class="wineitem" [ngClass]="{'wineitem--is-on-sale': wine.isOnSale}">
+  <div class="wineitem-img">
+    <img [src]="wine.imageUrl" />
+  </div>
+  <div class="wineitem-content">
+    <h2 class="wineitem-title">{{ wine.name }}</h2>
+    <div class="wineitem-price">{{ wine.price }} €</div>
+    <div class="wineitem-controls">
+      <button class="wineitem-btn" *ngIf="wine.quantityInCart > 0" (click)="decrementUnitsCart()">-</button>
+      <span class="wineitem-quantity">{{ wine.quantityInCart }}</span>
+      <button class="wineitem-btn" (click)="incrementUnitsCart()">+</button>
+    </div>
+  </div>
+</div>
