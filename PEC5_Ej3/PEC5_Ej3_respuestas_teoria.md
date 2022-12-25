@@ -31,3 +31,18 @@ A continuación podemos ver una tabla con los validadores para ser utilizados en
 
 
 ### c) ¿Qué son, cuáles son y para qué sirven los estados en los formularios reactivos?
+
+Los estados en formularios reactivos de Angular son valores que cambian dinámicamente en un formulario y que se utilizan para controlar la apariencia y el comportamiento del formulario. Los estados de un formulario pueden ser valores simples, como una cadena de texto o un número, o pueden ser objetos más complejos que contienen varias propiedades.
+
+El listado de posibles estados es el siguiente:
+
+- **Value**: el valor actual del campo de formulario.
+- **Disabled**: si un campo de formulario está deshabilitado o no.
+- **Required**: si un campo de formulario es obligatorio o no.
+- **Valid**: si un campo de formulario cumple con las reglas de validación establecidas.
+- **Touched**: si un usuario ha interactuado con un campo de formulario o no.
+- **Pristine**: si el valor de un campo de formulario ha sido modificado o no.
+- **Dirty**: si el valor de un campo de formulario ha sido modificado o no.
+Validating: si un campo de formulario está en proceso de validación o no.
+Pending: si una operación asíncrona, como la validación de un campo de formulario, está en proceso o no.
+Submitted: si un formulario ha sido enviado o no.
