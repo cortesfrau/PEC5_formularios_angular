@@ -20,7 +20,7 @@ export class WinenewComponent {
     this.wineForm = this.fb.group({
       name: ["", [Validators.required, wineNameValidator()]],
       price: [0, [Validators.required, Validators.min(1)]],
-      imageUrl: [
+      imgURL: [
         "",
         [
           Validators.required,
