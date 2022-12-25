@@ -1,1 +1,29 @@
-<p>winenew works!</p>
+<h2>Donar d'alta un nou vi</h2>
+
+<div>
+  <h4 class="error">{{ message }}</h4>
+  <form (ngSubmit)="createWine()" [formGroup]="wineForm">
+
+    <!-- Wine name -->
+    <div><input type="text" ngModel #wineName="ngModel" name="name" placeholder="Nom del vi" required></div>
+    <div class="error" *ngIf="(wineName.dirty || message) && wineName.invalid">El nom del vi és obligatori.</div>
+
+    <!-- Wine price -->
+    <div><input type="number" ngModel name="price" placeholder="Wine Price" #winePrice="ngModel" required></div>
+    <div class="error" *ngIf="(winePrice.dirty || message) && winePrice.invalid">El preu del vi és obligatori.</div>
+
+    <!-- Wine image -->
+    <div><input type="text" ngModel name="imageUrl" placeholder="URL de la imatge del vi" #wineImageUrl="ngModel" pattern="^http(s?)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$" required></div>
+    <div class="error" *ngIf="(wineImageUrl.dirty || message) && wineImageUrl.invalid">
+      <div *ngIf="wineImageUrl.errors?.['required']">La URL de la imatge del vi és obligatòria.</div>
+      <div *ngIf="wineImageUrl.errors?.['pattern']">La URL de la imatge del vi no és vàlida.</div>
+    </div>
+
+    <!-- Wine on sale or not -->
+    <div class="checkbox"><input type="checkbox" ngModel name="isOnSale">En venda</div>
+
+    <!-- Submit button -->
+    <button type="submit">Donar d'alta</button>
+
+  </form>
+</div>
