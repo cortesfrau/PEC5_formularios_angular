@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { Wine } from '../models/wine';
-import { WineQuantityChange } from '../models/wine-quantity-change';
+import { Wine } from '../../models/wine';
+import { WineQuantityChange } from '../../models/wine-quantity-change';
 
 @Component({
   selector: 'app-wineitem',
