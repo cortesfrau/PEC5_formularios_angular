@@ -11,3 +11,13 @@ Principales diferencias entre formularios dirigidos por plantilla y formularios 
 - **Enlace y procesamiento de datos**: En los formularios dirigidos por plantilla, los datos del formulario se enlazan a los elementos del formulario utilizando la directiva ngModel y se procesan en el componente de Angular utilizando métodos como ngSubmit. En los formularios reactivos, los datos del formulario se enlazan a los elementos del formulario utilizando el módulo FormControl y se procesan en el componente de Angular utilizando el módulo FormGroup.
 
 - **Facilidad de depuración**: Los formularios dirigidos por plantilla son más fáciles de depurar y pueden ser más adecuados para principiantes en Angular. Los formularios reactivos pueden ser más difíciles de depurar y pueden requerir un mayor conocimiento de Angular y del patrón de programación reactivo.
+
+
+### b) ¿Qué son, para qué sirven y cómo se utilizan las directivas ngModel y ngModelChange?
+
+Las directivas ngModel y ngModelChange son herramientas de Angular utilizadas para vincular elementos de formulario a propiedades en componentes de Angular y para procesar y validar datos de formulario, así como para ejecutar una expresión cuando el valor de un elemento de formulario cambie. A menudo se utilizan en formularios dirigidos por plantilla en Angular.
+
+La directiva ngModel se emplea para enlazar elementos de formulario a una propiedad en el componente de Angular y para procesar y validar los datos del formulario. Por ejemplo, puede utilizarse para asegurar que un campo de texto solo acepte caracteres alfanuméricos.
+
+La directiva ngModelChange es una expresión que se ejecuta cuando el valor de un elemento de formulario cambia. Por ejemplo, puede utilizarse para ejecutar una función llamada onNameChange cada vez que el valor de un campo de texto cambie. A menudo se utiliza junto con la directiva ngModel.
+
