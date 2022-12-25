@@ -6,7 +6,16 @@
 
     <!-- Wine name -->
     <div><input type="text" ngModel #wineName="ngModel" name="name" placeholder="Nom del vi" required></div>
-    <div class="error" *ngIf="(wineName.dirty || message) && wineName.invalid">El nom del vi és obligatori.</div>
+
+    <!-- <div class="error" *ngIf="(wineName.dirty || message) && wineName.invalid">El nom del vi és obligatori.</div> -->
+
+    <div class="error" *ngIf="(wineForm.get('name').dirty || message) && wineForm.get('name').invalid">
+      <div *ngIf="wineForm.get('name').errors.required">El nom del vi és obligatori.</div>
+      <div *ngIf="wineForm.get('name').errors.wineNameValid">El nom del vi no és vàlid</div>
+    </div>
+
+
+
 
     <!-- Wine price -->
     <div><input type="number" ngModel name="price" placeholder="Wine Price" #winePrice="ngModel" required></div>
