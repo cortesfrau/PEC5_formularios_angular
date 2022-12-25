@@ -13,7 +13,21 @@ FormControl, FormGroup y FormBuilder son clases que se utilizan para trabajar co
 
 ### b) Busca en la página oficial de Angular (o utiliza un recurso de O’Reilly) en el que se especifiquen todos los validadores que incluye Angular para ser utilizados en los formularios reactivos. Construye una tabla de resumen de estos.
 
+A continuación podemos ver una tabla con los validadores para ser utilizados en formularios reactivos de Angular:
 
+| Validador | Descripción |
+| --- | --- |
+| required | El campo es requerido y debe tener un valor. |
+| min | El campo debe tener un valor numérico mayor o igual que el especificado. |
+| max | El campo debe tener un valor numérico menor o igual que el especificado. |
+| minLength | El campo debe tener una longitud mínima de caracteres. |
+| maxLength | El campo debe tener una longitud máxima de caracteres. |
+| pattern | El campo debe coincidir con un patrón especificado mediante una expresión regular. |
+| email | El campo debe tener un formato de correo electrónico válido. |
+| nullValidator | El campo no se valida, siempre es válido. |
+| compose | Permite combinar varios validadores en uno solo. |
+| requiredTrue | El campo debe ser verdadero. |
+| checkboxRequired | El campo debe ser seleccionado. |
 
 
 ### c) ¿Qué son, cuáles son y para qué sirven los estados en los formularios reactivos?
