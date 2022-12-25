@@ -43,6 +43,7 @@ El listado de posibles estados es el siguiente:
 - **Touched**: si un usuario ha interactuado con un campo de formulario o no.
 - **Pristine**: si el valor de un campo de formulario ha sido modificado o no.
 - **Dirty**: si el valor de un campo de formulario ha sido modificado o no.
-Validating: si un campo de formulario está en proceso de validación o no.
-Pending: si una operación asíncrona, como la validación de un campo de formulario, está en proceso o no.
-Submitted: si un formulario ha sido enviado o no.
+- **Validating**: si un campo de formulario está en proceso de validación o no.
+- **Pending**: si una operación asíncrona, como la validación de un campo de formulario, está en proceso o no.
+- **Submitted**: si un formulario ha sido enviado o no.
+
