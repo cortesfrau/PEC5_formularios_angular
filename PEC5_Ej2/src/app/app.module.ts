@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WineitemComponent } from './wines/wineitem/wineitem.component';
 import { WinelistComponent } from './wines/winelist/winelist.component';
+import { WinenewComponent } from './wines/winenew/winenew.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WineitemComponent,
-    WinelistComponent
+    WinelistComponent,
+    WinenewComponent
   ],
   imports: [
     BrowserModule,
