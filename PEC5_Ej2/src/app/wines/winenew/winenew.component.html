@@ -3,68 +3,31 @@
 <div>
   <h4 class="error">{{ message }}</h4>
   <form (ngSubmit)="createWine(wineForm)" #wineForm="ngForm">
+
     <div ngModelGroup="wine">
-      <div>
-        <input
-          type="text"
-          ngModel
-          #wineName="ngModel"
-          name="name"
-          placeholder="Wine Name"
-          required
-        />
+
+      <!-- Wine name -->
+      <div><input type="text" ngModel #wineName="ngModel" name="name" placeholder="Nom del vi" required></div>
+      <div class="error" *ngIf="(wineName.dirty || message) && wineName.invalid">El nom del vi és obligatori.</div>
+
+      <!-- Wine price -->
+      <div><input type="number" ngModel name="price" placeholder="Wine Price" #winePrice="ngModel" required></div>
+      <div class="error" *ngIf="(winePrice.dirty || message) && winePrice.invalid">El preu del vi és obligatori.</div>
+
+      <!-- Wine image -->
+      <div><input type="text" ngModel name="imageUrl" placeholder="URL de la imatge del vi" #wineImageUrl="ngModel" pattern="^http(s?)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$" required></div>
+      <div class="error" *ngIf="(wineImageUrl.dirty || message) && wineImageUrl.invalid">
+        <div *ngIf="wineImageUrl.errors.required">La URL de la imatge del vi és obligatòria.</div>
+        <div *ngIf="wineImageUrl.errors.pattern">La URL de la imatge del vi no és vàlida.</div>
       </div>
-      <div
-        class="error"
-        *ngIf="(wineName.dirty || message) && wineName.invalid"
-      >
-        <!-- Cheating, since there is only one way the wine name field could be invalid -->
-        Wine name is required
-      </div>
-      <div>
-        <input
-          type="number"
-          ngModel
-          name="price"
-          placeholder="Wine Price"
-          #winePrice="ngModel"
-          required
-        />
-      </div>
-      <div
-        class="error"
-        *ngIf="(winePrice.dirty || message) && winePrice.invalid"
-      >
-        <!-- Cheating, since there is only one way the wine name field could be invalid -->
-        Wine price is required
-      </div>
-      <div>
-        <input
-          type="text"
-          ngModel
-          name="imageUrl"
-          placeholder="Wine Image URL"
-          #wineImageUrl="ngModel"
-          pattern="^http(s?)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$"
-          required
-        />
-      </div>
-      <div
-        class="error"
-        *ngIf="(wineImageUrl.dirty || message) && wineImageUrl.invalid"
-      >
-        <div *ngIf="wineImageUrl.errors.required">
-          Wine Image URL is required
-        </div>
-        <div *ngIf="wineImageUrl.errors.pattern">
-          Wine Image URL does not seem to be a valid URL
-        </div>
-      </div>
-      <div>
-        <input type="checkbox" ngModel name="isOnSale" />
-        On Sale
-      </div>
+
+      <!-- Wine on sale or not -->
+      <div><input type="checkbox" ngModel name="isOnSale">En venda</div>
+
     </div>
-    <button type="submit">Create</button>
+
+    <!-- Submit button -->
+    <button type="submit">Donar d'alta</button>
+
   </form>
 </div>
